@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SFGate Homepage Replica</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+<header>
+    <div class="contenitore1">
+        <div id="mySidenav" class="sidenav">
+            <div class="close-button">
+                <a href="javascript:void(0)" class="close-button" onclick="closeNav()">&times;</a>
+            </div>
+            <div class="search-container">
+                <form action="/action_page.php">
+                    <input type="text" class="custom-input" placeholder="Search.." name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+            <div class="Newsletter">
+                <p><a href="#">Newsletters</a></p>
+            </div>
+            <div class="dropdown">
+                <div class="dropdown-button">Home<i class="fa fa-caret-down ml-auto"></i></div>
+                <div class="dropdown-container">
+                    <a href="#">About SFGATE</a>
+                    <a href="#">Contact SFGATE</a>
+                    <a href="#">Newsletters</a>
+                </div>
+                <div class="dropdown-button">News<i class="fa fa-caret-down ml-auto"></i></div>
+                <div class="dropdown-container">
+                    <a href="#">Bay Area</a>
+                    <a href="#">California Wildfires</a>
+                    <a href="#">Education</a>
+                </div>
+                <div class="dropdown-button">Local<i class="fa fa-caret-down ml-auto"></i></div>
+                <div class="dropdown-container">
+                    <a href="#">SF History</a>
+                </div>
+            </div>
+        </div>
+        <div class="Barre">
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+        </div>
+        <div class="logo">
+            <img class="logo" src="https://placehold.co/220x150" alt="logo">
+        </div>
+        <div class="contenitore2">
+            <div class="contenitoreup">
+                <div class="Newsletters">
+                    <a href="#">Newsletters</a>
+                </div>
+                <div class="SignIn">
+                    <a href="#">Sign In</a>
+                </div>
+            </div>
+            <div class="contenitoredown">
+                <a href="#">News</a>
+                <a href="#">Sport</a>
+                <a href="#">Local</a>
+                <a href="#">Politics</a>
+                <a href="#">Culture</a>
+                <a href="#">Food</a>
+                <a href="#">Tahoe</a>
+                <a href="#">Travel</a>
+            </div>
+
+        </div>
+    </div>
+</header>
+<main>
+    <div class="row1">
+        <div class="col-lg-4 col1">
+            <div class="miniarticle">
+                <a href="#">
+                    <img class="miniimg" src="https://placehold.co/60x60" alt="miniimg">
+                    <p class="title">LOREM IPSUM</p>
+                    <p class="paraf">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                </a>
+            </div>
+            <div class="miniarticle">
+                <a href="#">
+                    <img class="miniimg" src="https://placehold.co/60x60" alt="miniimg">
+                    <p class="title">LOREM IPSUM</p>
+                    <p class="paraf">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                </a>
+            </div>
+            <div class="miniarticle">
+                <a href="#">
+                    <img class="miniimg" src="https://placehold.co/60x60" alt="miniimg">
+                    <p class="title">LOREM IPSUM</p>
+                    <p class="paraf">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </a>
+            </div>
+            <div class="miniarticle">
+                <a href="#">
+                    <img class="miniimg" src="https://placehold.co/60x60" alt="miniimg">
+                    <p class="title">LOREM IPSUM</p>
+                    <p class="paraf">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                </a>
+            </div>
+            <div class="miniarticle">
+                <a href="#">
+                    <img class="miniimg" src="https://placehold.co/60x60" alt="miniimg">
+                    <p class="title">LOREM IPSUM</p>
+                    <p class="paraf">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-4 col2">
+            <img class="principleimg" src="https://placehold.co/430x300" alt="principleimg">
+        </div>
+        <div class="col-lg-4 col3">
+            <div class="contorno">
+                <div class=""
+            </div>
+
+        </div>
+
+
+
+    </div>
+</main>
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").classList.add('open');
+        document.body.style.backgroundColor = "rgba(0,0,0,0.25)";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").classList.remove('open');
+        document.body.style.backgroundColor = "white";
+    }
+</script>
+<script>
+    let dropdown = document.getElementsByClassName("dropdown-button");
+    let i;
+
+    for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            let dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+            } else {
+                dropdownContent.style.display = "block";
+            }
+        });
+    }
+</script>
+</body>
+</html>

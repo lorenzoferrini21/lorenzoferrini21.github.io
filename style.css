@@ -1,0 +1,356 @@
+body{
+    margin: 0;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.logo{
+    min-width: 100px;
+}
+
+.sidenav{
+    height: 100%;
+    width: 0;
+    position: fixed; /*Per poter spostare la pag. senza spostare sidenav*/
+    z-index: 1;
+    background-color: #f1f1f1;
+    overflow-x: hidden; /*nasconde gli elementi che uscirebbero fuori dal sidenav*/
+    transition: 0.3s;
+    display:flex; /* per poter controllare gli elementi figli */
+    align-items: center; /*Allinea verticalmente gli elementi figli*/
+    border: 1px solid gray;
+}
+
+.sidenav.open{
+    width: 330px;
+}
+
+.close-button{
+    border: none;
+    background: none;
+    cursor: pointer;
+    position: absolute;
+    top: 3px;
+    left: 5px;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+}
+
+.close-button:hover{
+    text-decoration: none;
+    color: #a1003e;
+}
+
+.sidenav .search-container {
+    position: absolute;
+    top: 20px;
+    left: 50px;
+    width: 268px;
+    display: flex;
+    align-items: baseline;
+    border: 2px solid gray;
+    border-radius: 3px;
+    background: white;
+}
+
+.sidenav .search-container .custom-input {
+    flex: 1; /*Così input dovrebbe occupare tutto lo spazio disponibile*/
+    padding: 6px;
+    font-size: 17px;
+    color: black;
+    border: none;
+}
+
+.sidenav .search-container button {
+    padding: 6px 10px;
+    background: white;
+    font-size: 17px;
+    cursor: pointer;
+    border: none;
+    margin-left: 0;
+}
+
+.sidenav .search-container:hover{
+    border-color: cornflowerblue;
+}
+
+.sidenav .search-container .custom-input:focus{
+    outline: none;
+}
+
+.sidenav .search-container button:hover {
+    color: #ccc;
+}
+
+
+@media screen and (max-width: 750px) {
+    .sidenav.open {
+        width: 100%;
+    }
+
+    .sidenav .search-container{
+        display: flex;
+        width: 90%;
+        padding: 0;
+    }
+
+    .sidenav .search-container .custom-input{
+        flex: 1;
+        width: 100%;
+        border: none !important;
+
+    }
+
+    .sidenav .search-container button{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+
+
+.Newsletter{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    position: absolute;
+    top: 80px;
+    font-size: 20px;
+    width: 95%;
+    height: 40px;
+    margin-left: 12px;
+    border: 2px rgb(214, 0, 54);
+    border-radius: 20px;
+    background-color: rgb(214, 0, 54);
+    color: white;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.Newsletter a{
+    color: white;
+    flex: 1;
+    text-decoration: none;
+}
+
+.Newsletter :hover{
+    width: 100%;
+    height: 100%;
+    background-color: #e19997;
+    border: 2px #e19997;
+}
+
+.dropdown{
+    position: absolute;
+    top: 150px;
+    width: 100%;
+}
+
+.dropdown-button {
+    display: block;
+    text-align: left;
+    font-size: 20px;
+    width: 100%;
+    height: 40px;
+    padding: 6px 8px 6px 16px;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    box-sizing: border-box;
+}
+
+.dropdown-button:hover{
+    color: #666666;
+}
+
+.sidenav .dropdown-container {
+    display: none;
+    background-color: #f1f1f1;
+    padding-left: 20px;
+    margin-top: 5px;
+    border-left: 3px solid #444;
+    width: calc(100% - 20px);
+    box-sizing: border-box;
+}
+
+.fa-caret-down{
+    float: right;
+    padding-right: 8px;
+}
+
+.sidenav .dropdown-container a{
+    display: block;
+    width: 100%;
+    text-align: left;
+    font-size: 18px;
+    padding: 8px 0;
+    color: black;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/*--------------------------------------------------------------
+FINE SIDENAV
+ -------------------------------------------------------------*/
+
+.contenitore1{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.contenitore2{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.contenitoreup{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.Newsletters{
+    background-color: rgb(214, 0, 54);
+    display: flex;
+    text-align: center;
+    margin: 15px 3px;
+    border: 2px rgb(214, 0, 54);
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+.Newsletters a{
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 5px 30px;
+    box-sizing: border-box;
+}
+
+.SignIn{
+    display:flex;
+    text-align: center;
+    margin: 15px 15px 15px 3px;
+    box-sizing: border-box;
+}
+
+.SignIn a{
+    color: black;
+    font-size: 18px;
+    padding: 5px 30px;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.contenitoredown{
+    border-top: 1px solid #bbb;
+    width: 100%;
+
+    display: block;
+}
+
+.contenitoredown a{
+    color: black;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px){
+    .contenitoredown{
+        display:none;
+    }
+}
+
+/*------------------------------------------------------------
+MAIN
+ -----------------------------------------------------------*/
+
+main{
+    border-top: 1px solid #bbb;
+    padding-top: 100px;
+    display: flex;
+}
+
+.row1{
+    display: flex;
+    width: 100%;
+}
+
+.miniarticle{
+    text-decoration: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #bbb;
+}
+
+.miniarticle .title{
+    color: rgb(214, 0, 54);
+    font-size: 15px ;
+    font-weight: 500;
+    padding: 2px;
+}
+
+.miniarticle .paraf{
+    color: black;
+    position: relative;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.miniarticle .miniimg {
+    top: 0;
+    float: right;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.col1{
+    display: block;
+    max-width: 100%;
+}
+
+
+.col2{
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.col3{
+    display: block;
+    max-width: 100%;
+    flex-direction: row;
+
+}
+
+
+@media screen and (max-width: 900px){
+    .col3{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .col1{
+        display: none;
+    }
+}
+
+.contorno {
+    border: 3px solid black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
