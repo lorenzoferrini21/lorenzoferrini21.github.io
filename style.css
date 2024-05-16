@@ -265,9 +265,18 @@ FINE SIDENAV
     text-align: center;
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 800px){
     .contenitoredown{
         display:none;
+    }
+    header{
+        height: 70px;
+        display:flex;
+
+    }
+    .logo{
+        height: 70px;
+
     }
 }
 
@@ -295,6 +304,35 @@ main{
     border-top: 1px solid #bbb;
 }
 
+.miniarticle1{
+    text-decoration: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.miniarticle1 .title{
+    color: rgb(214, 0, 54);
+    font-size: 15px ;
+    font-weight: 500;
+    padding: 2px;
+}
+
+.miniarticle1 .paraf{
+    color: black;
+    position: relative;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.miniarticle1 .miniimg {
+    top: 0;
+    float: right;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
 .miniarticle .title{
     color: rgb(214, 0, 54);
     font-size: 15px ;
@@ -302,7 +340,7 @@ main{
     padding: 2px;
 }
 
-.miniarticle .paraf{
+.paraf{
     color: black;
     position: relative;
     font-size: 16px;
@@ -353,4 +391,52 @@ main{
     border-radius: 10px;
     display: flex;
     justify-content: center;
+    text-align: center;
+    z-index: 1;
 }
+
+.cella{
+    width: 100%;
+    border:1px solid black;
+    border-radius: 10px;
+    margin: 5px;
+    text-align: center;
+    padding: 40px 15px 15px 15px;
+    position: relative;
+    z-index:1;
+}
+
+.paragrafo{
+    padding: 5px;
+    color: black;
+    position: relative;
+    font-size: 16px;
+    font-weight: bold;
+    border-top: 6px dotted gray;
+    z-index: 1;
+}
+
+.uprowborder{
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 3px solid black;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+.uprow{
+    z-index: 10;
+    display: flex;
+    text-align: center;
+}
+
+.uprowtext{
+    z-index: 20;
+    padding: 5px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
